@@ -1,5 +1,79 @@
 # Changelog
 
+## [0.95.0](https://github.com/Sinclert/reana-server/compare/v0.9.3...0.95.0) (2024-05-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **gitlab:** The REST API endpoint `gitlab_projects` now includes pagination details.
+
+### Build
+
+* **deps:** pin invenio-userprofiles to 1.2.4 ([#665](https://github.com/Sinclert/reana-server/issues/665)) ([d6cb168](https://github.com/Sinclert/reana-server/commit/d6cb16854aea78d852ab43987a44933a9d6fbcad))
+* **docker:** non-editable submodules in "latest" mode ([#656](https://github.com/Sinclert/reana-server/issues/656)) ([d16fefb](https://github.com/Sinclert/reana-server/commit/d16fefb421e1d0cc712006c6a697ea67057b1f6c))
+* **python:** bump all required packages as of 2024-03-04 ([#674](https://github.com/Sinclert/reana-server/issues/674)) ([f40b82f](https://github.com/Sinclert/reana-server/commit/f40b82f983d295348a4a5a537b4147a9dc8b6dae))
+* **python:** bump shared modules ([#676](https://github.com/Sinclert/reana-server/issues/676)) ([47ad3ca](https://github.com/Sinclert/reana-server/commit/47ad3caab04119568b0f790075784aae59c3818d))
+* **python:** bump shared REANA packages as of 2024-03-04 ([#674](https://github.com/Sinclert/reana-server/issues/674)) ([aa18394](https://github.com/Sinclert/reana-server/commit/aa18394458d56806913e224e1b6651a177d18b39))
+
+
+### Features
+
+* **gitlab:** add search query parameter to filter projects ([#681](https://github.com/Sinclert/reana-server/issues/681)) ([109cf38](https://github.com/Sinclert/reana-server/commit/109cf38be440e15676e53ec1458ff9efe7d4a395)), closes [#518](https://github.com/Sinclert/reana-server/issues/518)
+* **gitlab:** add support for paginated project list ([#681](https://github.com/Sinclert/reana-server/issues/681)) ([4d23c62](https://github.com/Sinclert/reana-server/commit/4d23c62d57b8ada0d12895fe03190b898b4abd61)), closes [#518](https://github.com/Sinclert/reana-server/issues/518)
+
+
+### Bug fixes
+
+* **gitlab:** handle pagination of GitLab webhooks ([#684](https://github.com/Sinclert/reana-server/issues/684)) ([3f716f7](https://github.com/Sinclert/reana-server/commit/3f716f7369230ab2a864b6bfcae44a952ca5bf90)), closes [#682](https://github.com/Sinclert/reana-server/issues/682)
+
+
+### Code refactoring
+
+* **docs:** move from reST to Markdown ([#671](https://github.com/Sinclert/reana-server/issues/671)) ([b6d1799](https://github.com/Sinclert/reana-server/commit/b6d1799552085e1a9c2ad53eafcd572f1af4f3bf))
+
+
+### Code style
+
+* **black:** format with black v24 ([#670](https://github.com/Sinclert/reana-server/issues/670)) ([6d2b898](https://github.com/Sinclert/reana-server/commit/6d2b898b2322e6677739fdb1c3bd3916a3cf0887))
+
+
+### Continuous integration
+
+* **actions:** update GitHub actions due to Node 16 deprecation ([#680](https://github.com/Sinclert/reana-server/issues/680)) ([b7cc00a](https://github.com/Sinclert/reana-server/commit/b7cc00afddb5035a3ed8f964ea33fb94bca3e2d8))
+* add hadolint and flake8 linters ([b78d62d](https://github.com/Sinclert/reana-server/commit/b78d62d77d918498c88f48f9425fe0c1e3cf80b9))
+* added github actions workflow ([247e3a3](https://github.com/Sinclert/reana-server/commit/247e3a3adfcf298312fd7e85efc60aaf1bc2437d))
+* **commitlint:** addition of commit message linter ([#665](https://github.com/Sinclert/reana-server/issues/665)) ([2b43ecc](https://github.com/Sinclert/reana-server/commit/2b43eccdd7587970f92093b4d315a7a90b5f45ac))
+* **commitlint:** allow release commit style ([#675](https://github.com/Sinclert/reana-server/issues/675)) ([e0299ef](https://github.com/Sinclert/reana-server/commit/e0299efb273f2c95f88f86261c97a4bc6100786d))
+* **commitlint:** check for the presence of concrete PR number ([#669](https://github.com/Sinclert/reana-server/issues/669)) ([87c6145](https://github.com/Sinclert/reana-server/commit/87c6145e636d852ba5fd5ca6fa2cfc23ff6563d2))
+* pin hadolint version ([2bd2bd4](https://github.com/Sinclert/reana-server/commit/2bd2bd497dd96c41449f31af9086ee1670bff8df))
+* publish docker image after new release ([34131ba](https://github.com/Sinclert/reana-server/commit/34131bae5506785fc918047fdfdde5c8fb92833b))
+* **pytest:** move to PostgreSQL 14.10 ([#672](https://github.com/Sinclert/reana-server/issues/672)) ([e888ddd](https://github.com/Sinclert/reana-server/commit/e888ddd70d8ca17d4567c24b7d78a57bf6f8e060))
+* **release-please:** initial configuration ([#665](https://github.com/Sinclert/reana-server/issues/665)) ([1d5e7c5](https://github.com/Sinclert/reana-server/commit/1d5e7c5f4c3d471d0b2028274ec1785b53552d89))
+* **release-please:** update version in Dockerfile/OpenAPI specs ([#668](https://github.com/Sinclert/reana-server/issues/668)) ([3b3dc41](https://github.com/Sinclert/reana-server/commit/3b3dc418f40d5ce461e4a7418178f6a8cec2721f))
+* remove older versions from python tests ([28454b9](https://github.com/Sinclert/reana-server/commit/28454b9741b3a000268cc6a87ea271e4c07588e2))
+* removed pip upgrade ([a6694fa](https://github.com/Sinclert/reana-server/commit/a6694fa19a355541321d89c3151ca97fd1f5c633))
+* **shellcheck:** fix exit code propagation ([#669](https://github.com/Sinclert/reana-server/issues/669)) ([d7eac6b](https://github.com/Sinclert/reana-server/commit/d7eac6b26742797cb1b2c7077071fc3d2053aff1))
+* update all actions ([b72bc72](https://github.com/Sinclert/reana-server/commit/b72bc727adaa87e371d982b5e9f20f9361ecbc12))
+
+
+### Documentation
+
+* add .readthedocs.yaml to migrate to RTD v2 ([cf1ecd5](https://github.com/Sinclert/reana-server/commit/cf1ecd5baec4d792c03b9eac578f69386ddcad68))
+* add import & export users cli docs ([da6a58c](https://github.com/Sinclert/reana-server/commit/da6a58c498407312614983abe294f473d0df205d))
+* **authors:** complete list of contributors ([#673](https://github.com/Sinclert/reana-server/issues/673)) ([71b3f38](https://github.com/Sinclert/reana-server/commit/71b3f387b0816e23a3315c379ed45af0bb6661a3))
+* fix email flag on create user command ([e3bce9a](https://github.com/Sinclert/reana-server/commit/e3bce9a90d1be3332a41c6177afd0e1d73013ab6))
+* fix rtfd build badge so it shows the real status ([1df7b95](https://github.com/Sinclert/reana-server/commit/1df7b9591423b20c8911817152b128b93a9529b7))
+* remove reana-cluster references ([6255db8](https://github.com/Sinclert/reana-server/commit/6255db82ddac882a2acef8e909465c256dd6684d))
+* set language to English ([cc7bafa](https://github.com/Sinclert/reana-server/commit/cc7bafa6c40ad216631bc7ed7665625a4e37e8d4))
+* single-page RTFD outline ([231e0d5](https://github.com/Sinclert/reana-server/commit/231e0d56626087962391c380e3446a807bc2a927))
+* update command that retrieves admin token ([5264063](https://github.com/Sinclert/reana-server/commit/526406355f8d3e5e99efd518a4aa4dcea2f90ff3))
+* update openapi.json ([2453cdc](https://github.com/Sinclert/reana-server/commit/2453cdc77b31a2fd9ca3e4ab5f52fc36df509eaa))
+
+
+### Chores
+
+* **master:** release 0.95.0-alpha.1 ([9fa4059](https://github.com/Sinclert/reana-server/commit/9fa40595ce840391c4aed999c3d4dda4de7ad2eb))
+
 ## [0.9.3](https://github.com/reanahub/reana-server/compare/0.9.2...0.9.3) (2024-03-04)
 
 
